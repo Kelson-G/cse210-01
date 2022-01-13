@@ -5,7 +5,7 @@
 
 def main(): 
     game = [1,2,3,4,5,6,7,8,9]
-    print("Welcome to Tic Tac Toe 1.0. The Board is layed out as shown: \n1|2|3\n-+-+-\n4|5|6\n-+-+-\n7|8|9")
+    print("Welcome to Tic Tac Toe. The Board is layed out as shown: \n1|2|3\n-+-+-\n4|5|6\n-+-+-\n7|8|9")
     print("Press a number to begin.")
     length = 3
     while length < 12:
