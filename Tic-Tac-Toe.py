@@ -26,8 +26,8 @@ def turn(player,game):
         else:
             symbol = "O"
         box = int(input("Where would you like your %s: " % (symbol)))
-        if box in range(1,10):
-            box -= 1
+        box -= 1
+        if box in range(0,9) and game[box] != "X" and game[box] != "O":
             game.insert(box,symbol)
             box += 1
             game.pop(box)
@@ -41,14 +41,14 @@ def turn(player,game):
 
 def check(game):
     winning_sets = {
-        1:[1,2,3],
-        2:[4,5,6],
-        3:[7,8,9],
-        4:[1,4,7],
-        5:[2,5,8],
-        6:[3,6,9],
-        7:[1,5,9],
-        8:[3,5,7]
+        1:[0,1,2],
+        2:[3,4,5],
+        3:[6,7,8],
+        4:[0,3,6],
+        5:[1,4,7],
+        6:[2,5,8],
+        7:[0,4,8],
+        8:[2,4,6]
     }
     for set in winning_sets:
         if game[winning_sets[set][0]] == game[winning_sets[set][1]] == game[winning_sets[set][2]]:
